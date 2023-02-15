@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class OtzyvConfig(AppConfig):
+class DiscountsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'otzyv'
+    name = 'apps.discounts'
