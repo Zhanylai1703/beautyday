@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/home/zhanyl/Рабочий стол/beautyday/venv/bin/python3" "$0" "$@"
-' '''
+#!/home/gera/Документы/beautyday/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
