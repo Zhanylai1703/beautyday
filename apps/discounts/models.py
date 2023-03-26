@@ -56,10 +56,6 @@ class Service(models.Model):
         on_delete=models.CASCADE,
         verbose_name='Услуга'
     )
-    name = models.CharField(
-        max_length=100,
-        verbose_name='Услуга'
-    )
     price = models.DecimalField(
         max_digits=6, 
         decimal_places=0,
