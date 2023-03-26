@@ -38,8 +38,8 @@ class SubcategoryAdmin(admin.ModelAdmin):
 class ServiceAdmin(admin.ModelAdmin):
     list_display = (
             'id', 
-            'name', 
+            'subcategory', 
             'price', 
-            'subcategory'
-    )
+        )
+        
 

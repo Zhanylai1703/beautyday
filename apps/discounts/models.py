@@ -51,6 +51,11 @@ class Subcategory(models.Model):
 
 
 class Service(models.Model):
+    subcategory = models.ForeignKey(
+        Subcategory, 
+        on_delete=models.CASCADE,
+        verbose_name='Услуга'
+    )
     name = models.CharField(
         max_length=100,
         verbose_name='Услуга'
@@ -60,17 +65,14 @@ class Service(models.Model):
         decimal_places=0,
         verbose_name='Цена'
     )
-    subcategory = models.ForeignKey(
-        Subcategory, 
-        on_delete=models.CASCADE
-    )
+
 
     class Meta:
         verbose_name = 'Услуга'
         verbose_name_plural = 'Услуги'
 
     def __str__(self):
-        return self.name
+        return self.subcategory
 
 
 

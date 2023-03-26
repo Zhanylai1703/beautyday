@@ -46,9 +46,9 @@ class ServiceSerializer(serializers.ModelSerializer):
         model = Service
         fields = (
             'id', 
-            'name', 
+            'subcategory', 
             'price', 
-            'subcategory'
+            
         )
 
 
