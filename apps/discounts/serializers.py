@@ -14,7 +14,7 @@ class PromotionSerializer(serializers.ModelSerializer):
         fields = (
             'id', 
             'image', 
-            'description'
+            'description',
         )
 
 

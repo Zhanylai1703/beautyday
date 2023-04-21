@@ -23,24 +23,28 @@ class PromotionList(generics.ListAPIView):
     queryset = Promotion.objects.all()
     serializer_class = PromotionSerializer
 
+
 class PromotionCreate(generics.CreateAPIView):
     queryset = Promotion.objects.all()
     serializer_class = PromotionSerializer
     permission_classes = [IsAdminUser]
  
+ 
 class PromotionDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Promotion.objects.all()
-    permission_classes = [IsAdminUser]
+    serializer_class = PromotionSerializer
 
 
 class CategoryList(generics.ListAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
+
 class CategoryCreate(generics.CreateAPIView):
     queryset = Promotion.objects.all()
     serializer_class = CategorySerializer 
     permission_classes = [IsAdminUser]
+
 
 class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Category.objects.all()
@@ -51,6 +55,7 @@ class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):
 class SubcategoryList(generics.ListAPIView):
     queryset = Subcategory.objects.all()
     serializer_class = SubcategorySerializer
+
 
 class SubcategoryCreate(generics.CreateAPIView):
     queryset = Subcategory.objects.all()
@@ -67,10 +72,12 @@ class ServiceList(generics.ListAPIView):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
 
+
 class ServiceCreate(generics.CreateAPIView):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer 
     permission_classes = [IsAdminUser]
+
 
 class ServiceDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Service.objects.all()

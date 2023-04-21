@@ -30,6 +30,11 @@ from apps.otzyv.views import (
     ReviewList,
     ReviewCreate,
     ReviewDetail,
+    ArticleList,
+    ArticleCreate,
+    ArticleDetail,
+    ArticleImageCreate,
+    ArticleImageDetail,
 )
 
 schema_view = get_schema_view(
@@ -75,6 +80,11 @@ urlpatterns = [
     path('reviews/', ReviewList.as_view(), name='review-list'),
     path('review/', ReviewCreate.as_view(), name='review-create'),
     path('review/<int:pk>/', ReviewDetail.as_view(), name='review-detail'),
+    path('articles/', ArticleList.as_view(), name='article_list'),
+    path('articles/create/', ArticleCreate.as_view(), name='article_create'),
+    path('articles/int:pk/', ArticleDetail.as_view(), name='article_detail'),
+    path('article-images/create/', ArticleImageCreate.as_view(), name='image_create'),
+    path('article-images/int:pk/', ArticleImageDetail.as_view(), name='image_detail'),
 ]
 
 

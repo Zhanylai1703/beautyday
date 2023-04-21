@@ -11,6 +11,7 @@ class TeamSerializer(serializers.ModelSerializer):
             'name', 
             'last_name',
             'photo',
+            'position',
         )
 
 
